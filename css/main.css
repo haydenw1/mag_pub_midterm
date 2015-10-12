@@ -1,0 +1,138 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: avenir-light;
+  src: url(../fonts/avenir/light.otf); }
+@font-face {
+  font-family: avenir-medium;
+  src: url(../fonts/avenir/medium.otf); }
+@font-face {
+  font-family: avenir-heavy;
+  src: url(../fonts/avenir/heavy.otf); }
+@font-face {
+  font-family: baskerville-italic;
+  src: url(../fonts/baskerville/italic.otf); }
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  background: url("../assets/hq_background_orange.png"); }
+
+div.container {
+  background-color: #fff;
+  padding: 25px;
+  margin: 25px;
+  font-family: avenir-light; }
+
+.element.drop-cap:first-letter {
+  float: left;
+  color: #e84a0c;
+  font-size: 125px;
+  line-height: 92px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: avenir-heavy; }
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .element {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 25px auto;
+    width: 95%; } }
+@media screen and (min-width: 768px) {
+  .element {
+    font-size: 24px;
+    line-height: 35px;
+    margin: 25px auto;
+    width: 91.4702%; } }
+
+span.drop-cap {
+  color: #e84a0c; }
+span.in-text-title {
+  color: #e84a0c; }
+  @media screen and (min-width: 768px) {
+    span.in-text-title {
+      font-size: 20px;
+      line-height: 31px; } }
+
+.img-div {
+  display: block;
+  left: -25px;
+  position: relative;
+  width: calc(100% + 50px); }
+  .img-div img {
+    display: block;
+    width: 100%; }
+  .img-div .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 60%;
+    padding: 15px 25px; }
+    .img-div .caption .caption-title {
+      color: #e84a0c;
+      font-family: avenir-heavy;
+      font-size: 21px;
+      line-height: 25.2px; }
+    .img-div .caption .caption-text {
+      font-family: avenir-light;
+      font-size: 17px;
+      line-height: 20.4px; }
+
+p.title-lead-in {
+  font-family: baskerville-italic;
+  font-size: 27px;
+  line-height: 24px; }
+p.title {
+  font-family: avenir-heavy;
+  font-size: 33px;
+  line-height: 47px; }
+p.text-title {
+  color: #e84a0c;
+  font-family: avenir-medium; }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    p.text-title {
+      font-size: 27.7px;
+      line-height: 26.8px; } }
+  @media screen and (min-width: 768px) {
+    p.text-title {
+      font-size: 28px;
+      line-height: 30px; } }
+
+/*# sourceMappingURL=main.css.map */

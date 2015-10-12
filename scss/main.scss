@@ -1,0 +1,140 @@
+@import "partials/reset";
+@import "partials/fonts";
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$orange-alternative: rgb(232, 74, 12);
+$green-alternative: rgb(159, 198, 0);
+$blue-alternative: rgb(0, 46, 148);
+
+$container-padding: 25px; //*** if change, change 'img-div' width as well
+
+$first-breakpoint-value: 0px;
+$second-breakpoint-value: 767px;
+$small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
+
+body {
+  background: url("../assets/hq_background_orange.png");
+}
+
+div.container {
+  //@include outer-container;
+  background-color: #fff;
+  padding: $container-padding;
+  margin: 25px;
+  font-family: avenir-light;
+}
+
+.element {
+  &.drop-cap:first-letter {
+      float: left;
+      color: $orange-alternative;
+      font-size: 125px;
+      line-height: 92px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
+      font-family: avenir-heavy;
+  }
+
+  @include media($small-viewport) {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 25px auto;
+    width: 95%;
+  }
+
+  @include media($large-viewport) {
+    font-size: 24px;
+    line-height: 35px;
+    margin: 25px auto;
+    width: 91.4702%;
+  }
+}
+
+span {
+
+  &.drop-cap {
+    color: $orange-alternative;
+  }
+
+  // must be all caps
+  &.in-text-title {
+    color: $orange-alternative;
+
+    @include media($large-viewport) {
+      font-size: 20px;
+      line-height: 31px;
+    }
+  }
+}
+
+
+.img-div {
+  display: block;
+  left: -$container-padding;
+  position: relative;
+  width: calc(100% + 50px); //******************** has to be changed if container-padding changes
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 60%;
+    padding: 15px 25px;
+
+    .caption-title {
+      color: $orange-alternative;
+      font-family: avenir-heavy;
+      font-size: 21px;
+      line-height: 25.2px;
+    }
+
+    .caption-text {
+      font-family: avenir-light;
+      font-size: 17px;
+      line-height: 20.4px;
+    }
+  }
+}
+
+
+p {
+
+  &.title-lead-in {
+    font-family: baskerville-italic;
+    font-size: 27px;
+    line-height: 24px;
+  }
+
+  &.title {
+    font-family: avenir-heavy;
+    font-size: 33px;
+    line-height: 47px;
+  }
+
+  // must be all caps
+  &.text-title {
+    color: $orange-alternative;
+    font-family: avenir-medium;
+
+    @include media($small-viewport) {
+      font-size: 27.7px;
+      line-height: 26.8px;
+    }
+
+    @include media($large-viewport) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+  }
+}
