@@ -63,27 +63,34 @@ div.container {
       margin: 15px;
       padding: 15px; } }
 
+/*
 .element {
+  //default styling for ipad
   font-size: 24px;
   line-height: 35px;
   margin: 25px auto;
-  width: 91.4702%; }
-  @media screen and (min-width: 0px) and (max-width: 767px) {
-    .element {
-      font-size: 25px;
-      line-height: 35px;
-      margin: 25px auto;
-      width: 95%; } }
-  .element.drop-cap:first-letter {
+  width: 91.4702%;
+
+  //styling for sizes below ipad
+  @include media($small-viewport) {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 25px auto;
+    width: 95%;
+  }
+
+  //sizing for drop cap
+  &.drop-cap:first-letter {
     float: left;
-    color: #e84a0c;
+    color: $orange-alternative;
     font-size: 125px;
     line-height: 97px;
     padding-top: 5px;
     padding-right: 8px;
     padding-left: 3px;
-    font-family: avenir-heavy; }
-
+    font-family: avenir-heavy;
+  }
+}*/
 span.drop-cap {
   color: #e84a0c; }
 span.in-text-title {
@@ -94,24 +101,58 @@ span.number {
   font-size: 80px;
   line-height: 95px;
   font-family: avenir-heavy; }
-span.text-title {
-  display: block;
-  color: #be1e2d;
-  font-family: avenir-medium; }
+
+p {
+  font-size: 22px;
+  line-height: 35px;
+  margin: 20px auto;
+  width: 91.4702%; }
   @media screen and (min-width: 0px) and (max-width: 767px) {
-    span.text-title {
-      font-size: 27.7px;
-      line-height: 26.8px; } }
-  @media screen and (min-width: 768px) {
-    span.text-title {
-      font-size: 28px;
-      line-height: 30px; } }
+    p {
+      width: 95%; } }
+  p.drop-cap:first-letter {
+    float: left;
+    color: #e84a0c;
+    font-size: 125px;
+    line-height: 97px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: avenir-heavy; }
+  p.title-lead-in {
+    font-family: baskerville-italic;
+    font-size: 27px;
+    line-height: 24px;
+    margin: 10px auto 0px; }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      p.title-lead-in {
+        font-size: 24px; } }
+  p.title {
+    font-family: avenir-heavy;
+    font-size: 33px;
+    line-height: 30px;
+    margin: 10px auto 40px; }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      p.title {
+        font-size: 25px;
+        line-height: 30px; } }
+  p.text-title {
+    color: #e84a0c;
+    font-family: avenir-medium;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px auto 20px; }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      p.text-title {
+        font-size: 22px;
+        line-height: 36px; } }
 
 .img-div {
   display: block;
   left: -25px;
   position: relative;
-  width: calc(100% + 50px); }
+  width: calc(100% + 50px);
+  margin: 40px 0px; }
   @media screen and (min-width: 0px) and (max-width: 767px) {
     .img-div {
       width: calc(100% + 30px);
@@ -134,45 +175,23 @@ span.text-title {
     .img-div .caption .caption-title {
       color: #e84a0c;
       font-family: avenir-heavy;
-      font-size: 21px;
-      line-height: 25.2px; }
+      font-size: 20px;
+      line-height: 25.2px;
+      margin: 10px auto; }
     .img-div .caption .caption-text {
       font-family: avenir-light;
       font-size: 17px;
-      line-height: 20.4px; }
+      line-height: 20.4px;
+      margin: auto; }
 
-p {
-  /*
-  // must be all caps
-  &.text-title {
-    color: $orange-alternative;
-    font-family: avenir-medium;
-
-    @include media($small-viewport) {
-      font-size: 27.7px;
-      line-height: 26.8px;
-    }
-
-    @include media($large-viewport) {
-      font-size: 28px;
-      line-height: 30px;
-    }
-  }
-  */ }
-  p.title-lead-in {
-    font-family: baskerville-italic;
-    font-size: 27px;
-    line-height: 24px; }
-    @media screen and (min-width: 0px) and (max-width: 767px) {
-      p.title-lead-in {
-        font-size: 24px; } }
-  p.title {
-    font-family: avenir-heavy;
-    font-size: 33px;
-    line-height: 47px; }
-    @media screen and (min-width: 0px) and (max-width: 767px) {
-      p.title {
-        font-size: 25px;
-        line-height: 45px; } }
+.student-button {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 18.11388%;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .student-button:last-child {
+    margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */
