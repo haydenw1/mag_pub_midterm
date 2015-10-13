@@ -58,43 +58,64 @@ div.container {
   padding: 25px;
   margin: 25px;
   font-family: avenir-light; }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    div.container {
+      margin: 15px;
+      padding: 15px; } }
 
-.element.drop-cap:first-letter {
-  float: left;
-  color: #e84a0c;
-  font-size: 125px;
-  line-height: 92px;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-  font-family: avenir-heavy; }
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .element {
-    font-size: 25px;
-    line-height: 35px;
-    margin: 25px auto;
-    width: 95%; } }
-@media screen and (min-width: 768px) {
-  .element {
-    font-size: 24px;
-    line-height: 35px;
-    margin: 25px auto;
-    width: 91.4702%; } }
+.element {
+  font-size: 24px;
+  line-height: 35px;
+  margin: 25px auto;
+  width: 91.4702%; }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .element {
+      font-size: 25px;
+      line-height: 35px;
+      margin: 25px auto;
+      width: 95%; } }
+  .element.drop-cap:first-letter {
+    float: left;
+    color: #e84a0c;
+    font-size: 125px;
+    line-height: 97px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: avenir-heavy; }
 
 span.drop-cap {
   color: #e84a0c; }
 span.in-text-title {
-  color: #e84a0c; }
+  color: #be1e2d; }
+span.number {
+  color: #be1e2d;
+  display: block;
+  font-size: 80px;
+  line-height: 95px;
+  font-family: avenir-heavy; }
+span.text-title {
+  display: block;
+  color: #be1e2d;
+  font-family: avenir-medium; }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    span.text-title {
+      font-size: 27.7px;
+      line-height: 26.8px; } }
   @media screen and (min-width: 768px) {
-    span.in-text-title {
-      font-size: 20px;
-      line-height: 31px; } }
+    span.text-title {
+      font-size: 28px;
+      line-height: 30px; } }
 
 .img-div {
   display: block;
   left: -25px;
   position: relative;
   width: calc(100% + 50px); }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .img-div {
+      width: calc(100% + 30px);
+      left: -15px; } }
   .img-div img {
     display: block;
     width: 100%; }
@@ -105,6 +126,11 @@ span.in-text-title {
     background-color: #fff;
     width: 60%;
     padding: 15px 25px; }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      .img-div .caption {
+        padding: 10px 15px;
+        width: auto;
+        position: static; } }
     .img-div .caption .caption-title {
       color: #e84a0c;
       font-family: avenir-heavy;
@@ -115,24 +141,38 @@ span.in-text-title {
       font-size: 17px;
       line-height: 20.4px; }
 
-p.title-lead-in {
-  font-family: baskerville-italic;
-  font-size: 27px;
-  line-height: 24px; }
-p.title {
-  font-family: avenir-heavy;
-  font-size: 33px;
-  line-height: 47px; }
-p.text-title {
-  color: #e84a0c;
-  font-family: avenir-medium; }
-  @media screen and (min-width: 0px) and (max-width: 767px) {
-    p.text-title {
+p {
+  /*
+  // must be all caps
+  &.text-title {
+    color: $orange-alternative;
+    font-family: avenir-medium;
+
+    @include media($small-viewport) {
       font-size: 27.7px;
-      line-height: 26.8px; } }
-  @media screen and (min-width: 768px) {
-    p.text-title {
+      line-height: 26.8px;
+    }
+
+    @include media($large-viewport) {
       font-size: 28px;
-      line-height: 30px; } }
+      line-height: 30px;
+    }
+  }
+  */ }
+  p.title-lead-in {
+    font-family: baskerville-italic;
+    font-size: 27px;
+    line-height: 24px; }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      p.title-lead-in {
+        font-size: 24px; } }
+  p.title {
+    font-family: avenir-heavy;
+    font-size: 33px;
+    line-height: 47px; }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      p.title {
+        font-size: 25px;
+        line-height: 45px; } }
 
 /*# sourceMappingURL=main.css.map */
