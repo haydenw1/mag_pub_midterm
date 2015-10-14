@@ -1,0 +1,251 @@
+@import "partials/reset";
+@import "partials/fonts";
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$orange-alternative: rgb(232, 74, 12);
+$green-alternative: rgb(159, 198, 0);
+$blue-alternative: rgb(0, 46, 148);
+$number-color: rgb(190, 30, 45);
+
+$container-padding: 25px; //*** if change, change 'img-div' width as well
+
+$first-breakpoint-value: 0px;
+$second-breakpoint-value: 767px;
+$small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
+
+body {
+  background: url("../assets/hq_background_orange.png");
+}
+
+div.container {
+  //@include outer-container;
+  background-color: #fff;
+  padding: $container-padding;
+  margin: 25px;
+  font-family: avenir-light;
+
+  @include media($small-viewport) {
+    margin: 15px;
+    padding: 15px 15px 30px 15px;
+  }
+}
+
+/*
+.element {
+  //default styling for ipad
+  font-size: 24px;
+  line-height: 35px;
+  margin: 25px auto;
+  width: 91.4702%;
+
+  //styling for sizes below ipad
+  @include media($small-viewport) {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 25px auto;
+    width: 95%;
+  }
+
+  //sizing for drop cap
+  &.drop-cap:first-letter {
+    float: left;
+    color: $orange-alternative;
+    font-size: 125px;
+    line-height: 97px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: avenir-heavy;
+  }
+}*/
+
+span {
+
+  &.drop-cap {
+    color: $orange-alternative;
+  }
+
+  // must be all caps
+  &.in-text-title {
+    color: $number-color;
+  }
+
+  &.number {
+    color: $number-color;
+    display: block;
+    font-size: 80px;
+    line-height: 95px;
+    font-family: avenir-heavy;
+  }
+}
+
+
+
+p {
+
+   //default styling for ipad
+  font-size: 22px;
+  line-height: 35px;
+  margin: 20px auto;
+  width: 91.4702%;
+
+  //styling for sizes below ipad
+  @include media($small-viewport) {
+    //font-size: 25px;
+    //line-height: 35px;
+    //margin: 25px auto;
+    width: 95%;
+
+  }
+
+    //sizing for drop cap
+  &.drop-cap:first-letter {
+    float: left;
+    color: $orange-alternative;
+    font-size: 125px;
+    line-height: 97px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: avenir-heavy;
+  }
+
+  &.title-lead-in {
+    font-family: baskerville-italic;
+    font-size: 27px;
+    line-height: 24px;
+    margin: 10px auto 0px;
+
+    @include media($small-viewport) {
+      font-size: 24px;
+    }
+  }
+
+  &.title {
+    font-family: avenir-heavy;
+    font-size: 33px;
+    line-height: 30px;
+    margin: 10px auto 40px;
+
+    @include media($small-viewport) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+
+  // must be all caps
+  &.text-title {
+    color: $orange-alternative;
+    font-family: avenir-medium;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px auto 20px;
+
+    @include media($small-viewport) {
+      font-size: 22px;
+      line-height: 36px;
+    }
+  }
+}
+
+
+.img-div {
+  display: block;
+  left: -$container-padding;
+  position: relative;
+  width: calc(100% + 50px); //******************** has to be changed if container-padding changes
+  margin: 40px 0px 25px;
+
+  @include media($small-viewport) {
+    width: calc(100% + 30px);
+    left: -15px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 60%;
+    padding: 15px 25px;
+
+
+    @include media($small-viewport) {
+      padding: 10px 15px;
+      width: auto;
+      position: static;
+    }
+
+    .caption-title {
+      color: $orange-alternative;
+      font-family: avenir-heavy;
+      font-size: 20px;
+      line-height: 25.2px;
+      margin: 10px auto;
+    }
+
+    .caption-text {
+      font-family: avenir-light;
+      font-size: 17px;
+      line-height: 20.4px;
+      margin: auto;
+    }
+  }
+}
+
+.student-button {
+  @include span-columns(2.4 of 12);
+  //@include omega(5n);
+  //margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.button-div {
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.floaty {
+  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+
+.details-div {
+  p {
+    font-size: 20px;
+    margin: 0px;
+    line-height: 30px;
+    //color: white;
+    width: 100%;
+
+    &.text-title{
+      font-size: 30px;
+      margin: 0px 0px 5px;
+
+      @include media($small-viewport) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  span {
+    //color: white;
+  }
+
+  padding: 10px ;
+  //background-color: $number-color;
+  margin-bottom: 30px;
+}
+
+.directions {
+  margin: 30px auto 0px;
+  text-align: center;
+}
