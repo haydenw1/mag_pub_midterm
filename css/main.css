@@ -61,7 +61,7 @@ div.container {
   @media screen and (min-width: 0px) and (max-width: 767px) {
     div.container {
       margin: 15px;
-      padding: 15px; } }
+      padding: 15px 15px 30px 15px; } }
 
 /*
 .element {
@@ -152,7 +152,7 @@ p {
   left: -25px;
   position: relative;
   width: calc(100% + 50px);
-  margin: 40px 0px; }
+  margin: 40px 0px 25px; }
   @media screen and (min-width: 0px) and (max-width: 767px) {
     .img-div {
       width: calc(100% + 30px);
@@ -189,9 +189,34 @@ p {
   display: block;
   margin-right: 2.35765%;
   width: 18.11388%;
-  margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-bottom: 5px; }
   .student-button:last-child {
     margin-right: 0; }
+
+.button-div {
+  overflow: hidden;
+  margin-top: 15px; }
+
+.floaty {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
+
+.details-div {
+  padding: 10px;
+  margin-bottom: 30px; }
+  .details-div p {
+    font-size: 20px;
+    margin: 0px;
+    line-height: 30px;
+    width: 100%; }
+    .details-div p.text-title {
+      font-size: 30px;
+      margin: 0px 0px 5px; }
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        .details-div p.text-title {
+          font-size: 25px; } }
+
+.directions {
+  margin: 30px auto 0px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

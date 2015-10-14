@@ -29,7 +29,7 @@ div.container {
 
   @include media($small-viewport) {
     margin: 15px;
-    padding: 15px;
+    padding: 15px 15px 30px 15px;
   }
 }
 
@@ -158,7 +158,7 @@ p {
   left: -$container-padding;
   position: relative;
   width: calc(100% + 50px); //******************** has to be changed if container-padding changes
-  margin: 40px 0px;
+  margin: 40px 0px 25px;
 
   @include media($small-viewport) {
     width: calc(100% + 30px);
@@ -205,10 +205,47 @@ p {
 .student-button {
   @include span-columns(2.4 of 12);
   //@include omega(5n);
-  margin-top: 40px;
-  margin-bottom: 40px;
+  //margin-top: 40px;
+  margin-bottom: 5px;
 }
 
 .button-div {
+  overflow: hidden;
+  margin-top: 15px;
 }
 
+.floaty {
+  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+
+.details-div {
+  p {
+    font-size: 20px;
+    margin: 0px;
+    line-height: 30px;
+    //color: white;
+    width: 100%;
+
+    &.text-title{
+      font-size: 30px;
+      margin: 0px 0px 5px;
+
+      @include media($small-viewport) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  span {
+    //color: white;
+  }
+
+  padding: 10px ;
+  //background-color: $number-color;
+  margin-bottom: 30px;
+}
+
+.directions {
+  margin: 30px auto 0px;
+  text-align: center;
+}
