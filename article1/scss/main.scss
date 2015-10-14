@@ -160,6 +160,9 @@ p {
   width: calc(100% + 50px); //******************** has to be changed if container-padding changes
   margin: 40px 0px 25px;
 
+  //width: 50%;
+  //overflow: hidden;
+
   @include media($small-viewport) {
     width: calc(100% + 30px);
     left: -15px;
