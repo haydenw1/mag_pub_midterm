@@ -17,7 +17,7 @@ $small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $sec
 $large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
 
 body {
-  background: url("../assets/hq_background_orange.png");
+  background: url("../assets/hq_background_blue.png");
 }
 
 div.container {
@@ -65,7 +65,7 @@ div.container {
 span {
 
   &.drop-cap {
-    color: $orange-alternative;
+    color: $blue-alternative;
   }
 
   // must be all caps
@@ -104,7 +104,7 @@ p {
     //sizing for drop cap
   &.drop-cap:first-letter {
     float: left;
-    color: $orange-alternative;
+    color: $blue-alternative;
     font-size: 125px;
     line-height: 97px;
     padding-top: 5px;
@@ -139,7 +139,7 @@ p {
 
   // must be all caps
   &.text-title {
-    color: $orange-alternative;
+    color: $blue-alternative;
     font-family: avenir-medium;
     font-size: 24px;
     line-height: 36px;
@@ -218,34 +218,87 @@ p {
   box-shadow: 1px 1px 3px rgba(0,0,0,.5);
 }
 
-.details-div {
-  p {
-    font-size: 20px;
-    margin: 0px;
-    line-height: 30px;
-    //color: white;
-    width: 100%;
 
-    &.text-title{
-      font-size: 30px;
-      margin: 0px 0px 5px;
+.dps-slider {
+  position: relative;
+  overflow: auto;
 
-      @include media($small-viewport) {
-        font-size: 25px;
-      }
+  left: -$container-padding;
+  position: relative;
+  width: calc(100% + 50px); //******************** has to be changed if container-padding changes
+  //margin: 40px 0px 25px;
+
+  @include media($small-viewport) {
+    width: calc(100% + 30px);
+    left: -15px;
+  }
+
+  li {
+    list-style: none;
+    img {
+      width: 100%;
     }
   }
 
-  span {
-    //color: white;
+  ul li {
+    float: left;
   }
-
-  padding: 10px ;
-  //background-color: $number-color;
-  margin-bottom: 30px;
 }
 
-.directions {
-  margin: 30px auto 0px;
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
   text-align: center;
+
+  @include media($small-viewport) {
+    bottom: 5px;
+  }
 }
+
+.dots li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: .4;
+  -webkit-transition: background .5s, opacity .5s;
+  -moz-transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
+}
+
+.dots li.active {
+  background: $blue-alternative;
+  border: 2px solid $blue-alternative;
+  opacity: 1;
+}
+
+.slider-caption {
+  margin: 0px auto;
+  font-style: italic;
+
+  @include media($small-viewport) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+#slider1 {
+  margin-top: 40px;
+}
+
+#slider2 {
+  margin-bottom: 25px;
+
+  li {
+    padding: 15px;
+  }
+}
+
+

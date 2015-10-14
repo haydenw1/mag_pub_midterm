@@ -1,6 +1,8 @@
 var data = {
   ryan: {
     name: "Ryan Walsh",
+    yl: 4,
+    yim: 4,
     rf: "Has a 9 year old Welsh Springer Spaniel named Bailey",
     dj: "Deep-sea donut fisher",
     one: [
@@ -16,6 +18,8 @@ var data = {
     ]
   },
   tatiana: {
+    yl: 4,
+    yim: 3,
     name: "Tatiana Morales",
     rf: "Owns the entire Underworld collection, but has never watched them.",
     dj: "Photoshop Expert, Print Project Manager",
@@ -31,6 +35,8 @@ var data = {
   },
   marcus: {
     name: "Markus Hines",
+    yl: 2,
+    yim: 2,
     rf: "I run track.",
     dj: "To be a traveling artist or creating movie posters in Photoshop.",
     one: [
@@ -45,6 +51,8 @@ var data = {
   },
   tommy: {
     name: "Tommy Hines",
+    yl: 2,
+    yim: 2,
     rf: "In high school I won a baseball state championship.",
     dj: "I honestly don't know yet. I enjoy both the creative and production sides of media and I would like to do anything in those two Umbrellas. I think it would be really cool to work at a company like ESPN though.",
     one: [
@@ -59,6 +67,8 @@ var data = {
   },
   hayden: {
     name: "Hayden Wagner",
+    yl: 4,
+    yim: 4,
     rf: "I have an orange vacuum",
     dj: "Rope-swing builder",
     one: [

@@ -162,6 +162,8 @@ p {
 
   //width: 50%;
   //overflow: hidden;
+  //idth: 50%;
+
 
   @include media($small-viewport) {
     width: calc(100% + 30px);
@@ -171,6 +173,7 @@ p {
   img {
     display: block;
     width: 100%;
+    //float: left;
   }
 
   .caption {
@@ -251,4 +254,24 @@ p {
 .directions {
   margin: 30px auto 0px;
   text-align: center;
+}
+
+.image-details-div {
+  margin-bottom: 40px;
+//  left: -$container-padding;
+//  position: relative;
+//  width: calc(100% + 50px); //******************** has to be changed if container-padding changes
+//  margin: 40px 0px 40px;
+//
+//
+//  overflow: hidden;
+//
+//  @include media($small-viewport) {
+//    width: calc(100% + 30px);
+//    left: -15px;
+//  }
+}
+
+p.student-name {
+  color: $number-color;
 }

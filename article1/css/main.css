@@ -219,4 +219,10 @@ p {
   margin: 30px auto 0px;
   text-align: center; }
 
+.image-details-div {
+  margin-bottom: 40px; }
+
+p.student-name {
+  color: #be1e2d; }
+
 /*# sourceMappingURL=main.css.map */

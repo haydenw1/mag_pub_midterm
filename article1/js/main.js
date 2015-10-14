@@ -31,6 +31,7 @@ var maat = {
     }
 
     $( ".student-name").html(studentData.name);
+    $( ".year-level" ).html("<span class='in-text-title'>Year Level: </span>" + studentData.yl);
     $( ".random-fact" ).html("<span class='in-text-title'>Random Fact: </span>" + studentData.rf);
     $( ".dream-job" ).html("<span class='in-text-title'>Dream Job: </span>" + studentData.dj);
 
