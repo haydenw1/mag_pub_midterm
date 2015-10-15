@@ -4,7 +4,7 @@ var data = {
     yl: 4,
     yim: 4,
     rf: "Has a 9 year old Welsh Springer Spaniel named Bailey",
-    dj: "Deep-sea donut fisher",
+    dj: "Production Manager at an ad agency",
     one: [
       "Back in highschool I experimented with an independent study in printmaking. The entire process was very interesting and I was beginning to understand ink layering. This was my first exposure to the world of print. When I toured RIT I was initially interested in the co-op program. I was also interested in other majors such as Graphic Design and Industrial Design.",
       "This major is unique because it allows the students to branch off into different paths whether it be website coding, design, or print production while still handling different types of media."
