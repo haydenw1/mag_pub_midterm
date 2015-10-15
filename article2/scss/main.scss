@@ -4,24 +4,28 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+//colors used in article
 $orange-alternative: rgb(232, 74, 12);
 $green-alternative: rgb(159, 198, 0);
 $blue-alternative: rgb(0, 46, 148);
+$blue-alternative-light: rgb(0, 172, 233);
 $number-color: rgb(190, 30, 45);
 
 $container-padding: 25px; //*** if change, change 'img-div' width as well
 
+//breakpoints for below and above ipad screen sizes
 $first-breakpoint-value: 0px;
 $second-breakpoint-value: 767px;
 $small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
 $large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
 
+//change the background of the body
 body {
   background: url("../assets/hq_background_blue.png");
 }
 
+//styling for container element
 div.container {
-  //@include outer-container;
   background-color: #fff;
   padding: $container-padding;
   margin: 25px;
@@ -33,102 +37,71 @@ div.container {
   }
 }
 
-/*
-.element {
-  //default styling for ipad
-  font-size: 24px;
-  line-height: 35px;
-  margin: 25px auto;
-  width: 91.4702%;
-
-  //styling for sizes below ipad
-  @include media($small-viewport) {
-    font-size: 25px;
-    line-height: 35px;
-    margin: 25px auto;
-    width: 95%;
-  }
-
-  //sizing for drop cap
-  &.drop-cap:first-letter {
-    float: left;
-    color: $orange-alternative;
-    font-size: 125px;
-    line-height: 97px;
-    padding-top: 5px;
-    padding-right: 8px;
-    padding-left: 3px;
-    font-family: avenir-heavy;
-  }
-}*/
-
+//styles for span elements
 span {
-
+  //change the color of word with drop cap applied
   &.drop-cap {
     color: $blue-alternative;
   }
 
-  // must be all caps
+  // paragraph emphasis 'in text title' styling...must be all caps
   &.in-text-title {
-    color: $number-color;
+    color: $blue-alternative;
   }
 
+  //style for number element
   &.number {
-    color: $number-color;
+    color: $blue-alternative;
     display: block;
     font-size: 80px;
     line-height: 95px;
-    font-family: avenir-heavy;
+    font-family: futura;
+  }
+
+  //span to bold text
+  &.bold {
+    font-weight: bold;
   }
 }
 
 
-
+//styles for all text paragraph elements
 p {
-
-   //default styling for ipad
+  //default styling for ipad
   font-size: 22px;
   line-height: 35px;
-  margin: 20px auto;
-  width: 91.4702%;
+  margin: 20px 0px;
 
-  //styling for sizes below ipad
-  @include media($small-viewport) {
-    //font-size: 25px;
-    //line-height: 35px;
-    //margin: 25px auto;
-    width: 95%;
-
-  }
-
-    //sizing for drop cap
+  //sizing and styling for drop cap -- needs to be applied to the paragraph where there will be a drop cap
   &.drop-cap:first-letter {
     float: left;
     color: $blue-alternative;
-    font-size: 125px;
-    line-height: 97px;
-    padding-top: 5px;
+    font-size: 123px;
+    line-height: 82px;
+    padding-top: 21px;
     padding-right: 8px;
-    padding-left: 3px;
+    padding-left: 0px;
     font-family: avenir-heavy;
   }
 
+  //style for the lead in that comes before the title
   &.title-lead-in {
     font-family: baskerville-italic;
     font-size: 27px;
     line-height: 24px;
-    margin: 10px auto 0px;
+    margin: 10px 0px 0px;
 
     @include media($small-viewport) {
       font-size: 24px;
     }
   }
 
+  //styling for main title
   &.title {
     font-family: avenir-heavy;
     font-size: 33px;
     line-height: 30px;
-    margin: 10px auto 40px;
+    margin: 10px 0px 40px;
 
     @include media($small-viewport) {
       font-size: 25px;
@@ -136,14 +109,13 @@ p {
     }
   }
 
-
-  // must be all caps
+  //styling for 'text-titles' -- must be all caps
   &.text-title {
     color: $blue-alternative;
     font-family: avenir-medium;
     font-size: 24px;
     line-height: 36px;
-    margin: 30px auto 20px;
+    margin: 30px 0px 20px;
 
     @include media($small-viewport) {
       font-size: 22px;
@@ -152,7 +124,7 @@ p {
   }
 }
 
-
+//style and positioning of img container element
 .img-div {
   display: block;
   left: -$container-padding;
@@ -169,70 +141,22 @@ p {
     display: block;
     width: 100%;
   }
-
-  .caption {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #fff;
-    width: 60%;
-    padding: 15px 25px;
-
-
-    @include media($small-viewport) {
-      padding: 10px 15px;
-      width: auto;
-      position: static;
-    }
-
-    .caption-title {
-      color: $orange-alternative;
-      font-family: avenir-heavy;
-      font-size: 20px;
-      line-height: 25.2px;
-      margin: 10px auto;
-    }
-
-    .caption-text {
-      font-family: avenir-light;
-      font-size: 17px;
-      line-height: 20.4px;
-      margin: auto;
-    }
-  }
 }
 
-.student-button {
-  @include span-columns(2.4 of 12);
-  //@include omega(5n);
-  //margin-top: 40px;
-  margin-bottom: 5px;
-}
-
-.button-div {
-  overflow: hidden;
-  margin-top: 15px;
-}
-
-.floaty {
-  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
-}
-
-
+//style and positioning for image slider
 .dps-slider {
   position: relative;
   overflow: auto;
-
   left: -$container-padding;
   position: relative;
   width: calc(100% + 50px); //******************** has to be changed if container-padding changes
-  //margin: 40px 0px 25px;
 
   @include media($small-viewport) {
     width: calc(100% + 30px);
     left: -15px;
   }
 
+  //some default styling that goes with base slider
   li {
     list-style: none;
     img {
@@ -240,65 +164,77 @@ p {
     }
   }
 
+  //some default styling that goes with base slider
   ul li {
     float: left;
   }
 }
 
+//styling for dots of slider -- additional positioning done in 'main.js' on page load***
 .dots {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20px;
   text-align: center;
 
-  @include media($small-viewport) {
-    bottom: 5px;
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    text-indent: -999em;
+    border: 2px solid #fff;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: .4;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+
+    &.active {
+      background: $blue-alternative-light;
+      border: 2px solid $blue-alternative-light;
+      opacity: 1;
+    }
   }
 }
 
-.dots li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px;
-  text-indent: -999em;
-  border: 2px solid #fff;
-  background: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  opacity: .4;
-  -webkit-transition: background .5s, opacity .5s;
-  -moz-transition: background .5s, opacity .5s;
-  transition: background .5s, opacity .5s;
-}
-
-.dots li.active {
-  background: $blue-alternative;
-  border: 2px solid $blue-alternative;
-  opacity: 1;
-}
-
+//styles for the slider image captions
 .slider-caption {
-  margin: 0px auto;
+  margin: 10px 25px;
   font-style: italic;
 
   @include media($small-viewport) {
     font-size: 18px;
     line-height: 26px;
+    margin: 10px 15px;
   }
 }
 
+//small margin change for specific slider
 #slider1 {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-#slider2 {
-  margin-bottom: 25px;
+//positioning and styling of HTML audio player element
+audio {
+  margin: 0px auto 20px;
+  width: 100%;
+}
+
+//positioning and styling of unordered text list and list elements
+.ordered-list {
+  font-size: 22px;
+  line-height: 35px;
+  margin: 20px 0px;
+  padding-left: 30px;
 
   li {
-    padding: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
   }
 }
+
 
 

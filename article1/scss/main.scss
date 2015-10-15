@@ -4,6 +4,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+//colors used in article
 $orange-alternative: rgb(232, 74, 12);
 $green-alternative: rgb(159, 198, 0);
 $blue-alternative: rgb(0, 46, 148);
@@ -11,17 +12,19 @@ $number-color: rgb(190, 30, 45);
 
 $container-padding: 25px; //*** if change, change 'img-div' width as well
 
+//breakpoints for below and above ipad screen sizes
 $first-breakpoint-value: 0px;
 $second-breakpoint-value: 767px;
 $small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
 $large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
 
+//change the background of the body
 body {
   background: url("../assets/hq_background_orange.png");
 }
 
+//styling for container element
 div.container {
-  //@include outer-container;
   background-color: #fff;
   padding: $container-padding;
   margin: 25px;
@@ -33,86 +36,53 @@ div.container {
   }
 }
 
-/*
-.element {
-  //default styling for ipad
-  font-size: 24px;
-  line-height: 35px;
-  margin: 25px auto;
-  width: 91.4702%;
-
-  //styling for sizes below ipad
-  @include media($small-viewport) {
-    font-size: 25px;
-    line-height: 35px;
-    margin: 25px auto;
-    width: 95%;
-  }
-
-  //sizing for drop cap
-  &.drop-cap:first-letter {
-    float: left;
-    color: $orange-alternative;
-    font-size: 125px;
-    line-height: 97px;
-    padding-top: 5px;
-    padding-right: 8px;
-    padding-left: 3px;
-    font-family: avenir-heavy;
-  }
-}*/
-
+//styles for span elements
 span {
-
+  //change the color of word with drop cap applied
   &.drop-cap {
     color: $orange-alternative;
   }
 
-  // must be all caps
+  // paragraph emphasis 'in text title' styling...must be all caps
   &.in-text-title {
     color: $number-color;
   }
 
+  //style for number element
   &.number {
     color: $number-color;
     display: block;
     font-size: 80px;
     line-height: 95px;
-    font-family: avenir-heavy;
+    font-family: futura;
+  }
+
+  //span to bold text
+  &.bold {
+    font-weight: bold;
   }
 }
 
-
-
+//styles for all text paragraph elements
 p {
-
-   //default styling for ipad
+  //default styling for ipad
   font-size: 22px;
   line-height: 35px;
   margin: 20px auto;
-  width: 91.4702%;
 
-  //styling for sizes below ipad
-  @include media($small-viewport) {
-    //font-size: 25px;
-    //line-height: 35px;
-    //margin: 25px auto;
-    width: 95%;
-
-  }
-
-    //sizing for drop cap
+  //sizing and styling for drop cap -- needs to be applied to the paragraph where there will be a drop cap
   &.drop-cap:first-letter {
     float: left;
     color: $orange-alternative;
-    font-size: 125px;
-    line-height: 97px;
-    padding-top: 5px;
+    font-size: 123px;
+    line-height: 82px;
+    padding-top: 21px;
     padding-right: 8px;
-    padding-left: 3px;
+    padding-left: 0px;
     font-family: avenir-heavy;
   }
 
+  //style for the lead in that comes before the title
   &.title-lead-in {
     font-family: baskerville-italic;
     font-size: 27px;
@@ -124,6 +94,7 @@ p {
     }
   }
 
+  //styling for main title
   &.title {
     font-family: avenir-heavy;
     font-size: 33px;
@@ -136,8 +107,7 @@ p {
     }
   }
 
-
-  // must be all caps
+  //styling for 'text-titles' -- must be all caps
   &.text-title {
     color: $orange-alternative;
     font-family: avenir-medium;
@@ -152,7 +122,7 @@ p {
   }
 }
 
-
+//style and positioning of img container element
 .img-div {
   display: block;
   left: -$container-padding;
@@ -160,22 +130,18 @@ p {
   width: calc(100% + 50px); //******************** has to be changed if container-padding changes
   margin: 40px 0px 25px;
 
-  //width: 50%;
-  //overflow: hidden;
-  //idth: 50%;
-
-
   @include media($small-viewport) {
     width: calc(100% + 30px);
     left: -15px;
   }
 
+  //styling for the image
   img {
     display: block;
     width: 100%;
-    //float: left;
   }
 
+  //styling for caption holder
   .caption {
     position: absolute;
     left: 0;
@@ -191,6 +157,7 @@ p {
       position: static;
     }
 
+    //styling for the caption title under the image
     .caption-title {
       color: $orange-alternative;
       font-family: avenir-heavy;
@@ -199,6 +166,7 @@ p {
       margin: 10px auto;
     }
 
+    //styling for the main caption text
     .caption-text {
       font-family: avenir-light;
       font-size: 17px;
@@ -208,28 +176,33 @@ p {
   }
 }
 
+//styling and width sizing for the buttons that users select to see other student's content
 .student-button {
   @include span-columns(2.4 of 12);
-  //@include omega(5n);
-  //margin-top: 40px;
   margin-bottom: 5px;
 }
 
+//styling and positioning for button container
 .button-div {
   overflow: hidden;
   margin-top: 15px;
 }
 
+//small shadow to unselected button elements
 .floaty {
   box-shadow: 1px 1px 3px rgba(0,0,0,.5);
 }
 
+//styling for detail holder div
 .details-div {
+  padding: 10px ;
+  margin-bottom: 30px;
+
+  //styling for detail paragraph text
   p {
     font-size: 20px;
     margin: 0px;
     line-height: 30px;
-    //color: white;
     width: 100%;
 
     &.text-title{
@@ -241,37 +214,20 @@ p {
       }
     }
   }
-
-  span {
-    //color: white;
-  }
-
-  padding: 10px ;
-  //background-color: $number-color;
-  margin-bottom: 30px;
 }
 
+//styling for direction text above the buttons
 .directions {
   margin: 30px auto 0px;
   text-align: center;
 }
 
+//spacing for student details below image
 .image-details-div {
   margin-bottom: 40px;
-//  left: -$container-padding;
-//  position: relative;
-//  width: calc(100% + 50px); //******************** has to be changed if container-padding changes
-//  margin: 40px 0px 40px;
-//
-//
-//  overflow: hidden;
-//
-//  @include media($small-viewport) {
-//    width: calc(100% + 30px);
-//    left: -15px;
-//  }
 }
 
+//color fix for student name in the details section
 p.student-name {
   color: $number-color;
 }
